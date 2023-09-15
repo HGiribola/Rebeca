@@ -12,10 +12,11 @@
 }
 
 :root {
-    --bg-color: #;
-    --second-bg-color: #;
+    --bg-color: black;
+    --second-bg-color: lightcoral;
     --text-color: white;
     --main-color: red;
+    --transparent-color: rgba(0, 0, 0, 0);
 }
 
 html {
@@ -33,14 +34,15 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 3rem 9%;
-    background: lightcoral;
+    padding: 24px 10%;
+    background-color: var(--second-bg-color);
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
+    margin-top: 1rem;
     font-size: 3rem;
     color: var(--text-color);
     font-weight: 600;
@@ -53,7 +55,20 @@ body {
     margin-left: 4rem
     
 }
+
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color)
 }
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a {
+    color: var(--text-color);
+}
+
